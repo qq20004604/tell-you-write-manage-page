@@ -23,7 +23,7 @@ class Root extends React.Component {
                 url: '#aaa'
             },
             {
-                nav: 'aaa',
+                nav: 'bbb',
                 text: 'BBB',
                 url: '#bbb'
             },

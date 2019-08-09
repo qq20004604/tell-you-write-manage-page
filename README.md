@@ -273,7 +273,7 @@ import Footter from './footter.jsx';
 1、同样图片放在 src/img 文件夹下，css中的写法是：
 
 ```
-background-image: url('~@/title-icon.png');
+background-image: url('~@/logo.png');
 ```
 
 根据的配置是：
