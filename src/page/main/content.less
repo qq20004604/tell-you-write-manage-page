@@ -1,0 +1,34 @@
+@aside-bk-color: #2d4054;
+
+#content {
+  position: absolute;
+  top: 80px;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  background-color: #f3f3f3;
+
+  .content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    height: 100%;
+
+    .aside {
+      position: absolute;
+      left: 0;
+      width: 270px;
+      height: 100%;
+      background-color: @aside-bk-color;
+    }
+
+    .article-box {
+      position: absolute;
+      left: 270px;
+      right: 0;
+      height: 100%;
+      padding: 0 30px;
+    }
+  }
+}

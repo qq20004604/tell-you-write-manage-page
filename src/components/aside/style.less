@@ -1,0 +1,94 @@
+@hoverNavBkColor: #435466;
+
+.aside-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 20px;
+  overflow: hidden;
+
+  .aside-nav-box {
+    width: 300px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .aside-nav-btn {
+    position: relative;
+    height: 45px;
+    width: 100%;
+    max-width: 270px;
+
+    .aside-nav-btn-icon {
+      position: absolute;
+      top: 50%;
+      left: 28px;
+      width: 20px;
+      height: 20px;
+      transform: translateY(-50%);
+      color: #f3f3f3;
+    }
+
+    .aside-nav-btn-text {
+      font-size: 14px;
+      position: absolute;
+      top: 50%;
+      left: 60px;
+      right: 20px;
+      transform: translateY(-50%);
+      height: 14px;
+      line-height: 14px;
+      color: #f3f3f3;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+  }
+
+  .aside-nav-btn:hover, .aside-nav-btn.active {
+    background-color: @hoverNavBkColor;
+    cursor: pointer;
+
+    .aside-nav-btn-icon, .aside-nav-btn-text {
+      color: #00B4CF !important;
+    }
+  }
+}
+
+.aside-dear {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 15px 5px 15px;
+  overflow: hidden;
+
+  .aside-dear-title {
+    position: relative;
+    font-weight: 300;
+    height: 34px;
+    line-height: 34px;
+    font-size: 24px;
+    color: #ccc;
+  }
+
+  .aside-dear-item {
+    display: inline-block;
+    font-size: 12px;
+    color: #999;
+    height: 22px;
+    line-height: 22px;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .aside-dear-item:hover {
+    color: #00b4cf;
+    cursor: pointer;
+  }
+}

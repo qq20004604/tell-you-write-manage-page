@@ -1,0 +1,222 @@
+.article {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .global-state {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    height: 115px;
+    width: 100%;
+
+    .base-box {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 270px;
+      overflow: hidden;
+    }
+
+    .MY-ABC, .MY-DEF {
+      .MY-ABC-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 144px;
+        opacity: 0.2;
+        color: #fff;
+      }
+
+      .MY-ABC-text {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      .MY-ABC-count {
+        position: absolute;
+        top: 55px;
+        right: 20px;
+        font-size: 48px;
+        color: #fff;
+      }
+    }
+
+    .MY-ABC {
+      .base-box;
+      left: 0;
+      background-color: #ff9a2a;
+    }
+
+    @keyframes rotate360deg {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      50% {
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+
+    .MY-ABC:hover .MY-ABC-bg {
+      // 为什么有傻逼的要求让他转啊？图片原本根本就不是正方形的好么！！
+      animation: rotate360deg 2s both linear infinite;
+    }
+
+    .MY-DEF {
+      .base-box;
+      left: 300px;
+      background-color: #7fbc39;
+
+      .MY-ABC-bg {
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .statistics {
+      .base-box;
+      left: 600px;
+      background-color: #fff;
+
+      .statistics-item {
+        position: relative;
+        display: inline-block;
+        float: left;
+        width: 90px;
+        vertical-align: top;
+        height: 100%;
+
+        .description {
+          position: absolute;
+          top: 20px;
+          width: 100%;
+          text-align: center;
+          font-size: 12px;
+        }
+
+        .count {
+          position: absolute;
+          top: 70px;
+          width: 100%;
+          text-align: center;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.article-tabs {
+  position: absolute;
+  top: 150px;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #fff;
+
+  .article-tab {
+    float: left;
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    width: 80px;
+    line-height: 50px;
+    border-bottom: 3px solid #fff;
+    border-right: 1px solid #efefef;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .article-tab.active {
+    border-bottom: 3px solid #00b4cf;
+    cursor: default;
+  }
+
+  .tab-input-box {
+    position: relative;
+    float: left;
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    margin-left: 30px;
+    width: 170px;
+    padding: 12px 0;
+
+    .tab-input {
+      width: 100%;
+      height: 100%;
+      padding-left: 35px;
+      background-color: #f3f3f3;
+      border: none;
+      border-top: 1px solid #e1e4e6;
+      border-left: 1px solid #e1e4e6;
+      font-size: 12px;
+    }
+
+    .tab-input:focus {
+      outline: none;
+    }
+
+    .tab-input-icon {
+      position: absolute;
+      top: 50%;
+      left: 7px;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      color: #999;
+    }
+  }
+
+  .arrangement {
+    position: absolute;
+    top: 20px;
+    width: 20px;
+    height: 17px;
+    cursor: pointer;
+  }
+
+  .arrangement-list {
+    .arrangement;
+    right: 25px;
+  }
+
+  .arrangement-card {
+    .arrangement;
+    right: 65px;
+  }
+
+  .arrangement-list.active, .arrangement-card.active {
+    color: #00B4CF;
+    cursor: default;
+  }
+}
+
+.site-list {
+  position: absolute;
+  top: 220px;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  overflow: hidden;
+  background: #333;
+
+  .site-list-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    // site-list 宽度是750px，滚动条预留25px宽，因此是775px
+    width: 775px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
